@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .cimg {
+      height: 80vh;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Bug Tracker</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#login">
+              Login
+            </button>
+            <!-- modal for Login -->
+            <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="/lp" method="post">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                      <div class="md-3">
+                        <label for="inputPassword5" class="form-label">Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<div id="passwordHelpBlock" class="form-text">
+  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+</div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+            <!-- for sign up -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signup">
+              Sign Up
+            </button>
+            <!-- button created for Sign Up -->
+            <div class="modal fade" id="signup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="/lp" method="post">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">User Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="User Name">
+                      </div>
+                      <div class="md-3">
+                        <label for="inputPassword5" class="form-label">Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<div id="passwordHelpBlock" class="form-text">
+  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+</div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <br /><br />
+    <div class="container text-center" style="background-color: aliceblue;border: solid rgb(150, 165, 231) 0.15rem;border-radius: 2rem;">
+      <div class="row">
+        <div class="col-md-6 text-center fs-5" >
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam,
+            beatae sit. Eaque itaque ducimus vero aperiam omnis. Rem repellendus
+            ut veniam laudantium ullam ab hic eum vero deserunt perspiciatis
+            impedit cumque, omnis explicabo! Explicabo similique dignissimos
+            harum facilis libero inventore, sed, itaque consequuntur fugit
+            excepturi temporibus quibusdam corporis ut delectus ullam ipsa magni
+            odit aliquid minima repellat rem cum. Fugit provident illum maxime
+            optio quas, veritatis veniam ab esse quos dolorem eligendi rem
+            tenetur, atque cupiditate, deleniti quod eum! Similique nesciunt
+            harum, iure velit voluptate, consequatur iste ut ipsa at aliquid vel
+            veritatis suscipit nostrum voluptates, ullam doloremque adipisci
+            accusantium.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1675793715030-0584c8ec4a13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGV2fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+            alt=""
+            class="rounded float-start" style="height: 45vh;width: 100%;margin-top: 1vh;border: solid rgb(225, 225, 225) 0.2rem;"
+          />
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://assets-global.website-files.com/6270e8022b05abb840d27d6f/6311fab0a48397aba5e3e675_b_How-to-Write-a-Bug-Report-The-Ideal-Bug-Report-.png"
+            class="d-block w-100 cimg"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="data:image/png;base64,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"
+            class="d-block w-100 cimg"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="data:image/png;base64,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"
+            class="d-block w-100 cimg"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2021 Company, Inc</p>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
