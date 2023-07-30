@@ -89,6 +89,7 @@
               Sign Up
             </button>
             <!-- button created for Sign Up -->
+            <!-- modal + form for signup -->
             <div class="modal fade" id="signup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -97,14 +98,38 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
+                    <!-- modal body ====>> form starts -->
                     <form action="/lp" method="post">
                       <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <label for="Fname" class="form-label">First Name</label>
+                        <input type="email" class="form-control" id="Fname" placeholder="First Name">
                       </div>
                       <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">User Name</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="User Name">
+                        <label for="Lname" class="form-label">Last Name</label>
+                        <input type="email" class="form-control" id="Lname" placeholder="Last Name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="Uname" class="form-label">User Name</label>
+                        <input type="email" class="form-control" id="Uname" placeholder="User Name">
+                      </div>
+                      <div class="md-3">
+                        <label for="Role">Role</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="Role" id="Admin" value="Admin">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Admin
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="Role" id="Reviwer" checked value="Reviwer">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Reviwer
+                          </label>
+                        </div>
                       </div>
                       <div class="md-3">
                         <label for="inputPassword5" class="form-label">Password</label>
@@ -133,7 +158,7 @@
       <div class="row">
         <div class="col-12 text-center text-white bg-dark" style="border-top-left-radius: 1rem;border-top-right-radius: 1rem;">
           <br>
-          <span style="text-align: center;font-weight: 700;color: rgb(49, 227, 60);">DefectMonitor</span><br>
+          <span class="fs-4" style="text-align: center;font-weight: 700;color: rgb(49, 227, 60);">DefectMonitor</span><br>
           <span id="hrefaboutus" style="text-align: center;font-weight: 900;color: rgb(49, 227, 60);">____________</span><br>
           The purpose of the project you described, which manages the track record of bugs in the production line and allows users to manage the track record of the entire project, is to provide a comprehensive solution for bug tracking and project management.
           The primary purpose is to ensure the effective management of bugs that arise in the production line of code. This involves recording and tracking each bug's details, including its description, severity, status, and assigned developer, throughout its lifecycle. The bug tracking component allows for efficient bug resolution, collaboration among team members, and the ability to prioritize and assign tasks.
@@ -151,7 +176,7 @@
       <div class="row">
         <div class="col-md-6 " style="padding: 1rem;">
           
-          <img src="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?w=2000" alt="No image available" style="height: 40vh;width:40vw;">
+          <img src="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?w=2000" alt="No image available" style="height: 40vh;width:40vw;border-radius: 1rem;">
           
         </div>
         <div class="col-md-6 " style="padding-top: 10vh;">
@@ -187,7 +212,7 @@
           <img
             src="https://plus.unsplash.com/premium_photo-1675793715030-0584c8ec4a13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGV2fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
             alt=""
-            class="rounded float-start" style="height: 45vh;width: 100%;margin-top: 1vh;border: solid rgb(225, 225, 225) 0.2rem;"
+            class="float-start" style="height: 45vh;width: 100%;margin-top: 1vh; border-radius: 1rem;"
           />
         </div>
       </div>
