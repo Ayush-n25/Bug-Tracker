@@ -4,17 +4,16 @@ const ProductSchema = new mongoose.Schema({
   FirstName: {
     type: String,
     required: true,
-    unique: true,
   },
   LastName: {
     type: String,
     required: true,
-    unique: true,
   },
   Email: {
     type: String,
     lowercase: true,
     required: true,
+    unique: true,
     trim: true,
     match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/],
   },
@@ -30,9 +29,8 @@ const ProductSchema = new mongoose.Schema({
     min: 8,
     max: 20,
   },
-  Person:{
+  Person: {
     type: String,
-    unique: true,
     required: true,
   },
   Password: {
@@ -41,8 +39,19 @@ const ProductSchema = new mongoose.Schema({
     required: true,
     min: 8,
     max: 20,
+    match: [/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,1024}$/],
   },
 });
 
 const Product = mongoose.model('SignUp', ProductSchema)
+// function correctPass(user) {
+//   const schema = Joi.object().keys({
+//     password: Joi.string()
+//       .min(8)
+//       .required()
+//       .max(20)
+//       .regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,1024}$/), //special/number/capital
+//   });
+//   return Joi.validate(user, schema);
+// }
 module.exports = Product

@@ -15,10 +15,7 @@ let db = mongoose
   .catch((error) => {
     console.log(error);
   });
-const connection = mongoose.connection;
-connection.once("open", () => {
-  console.log("Connection Established Successfully");
-});
+
 
 // Inserting Data into the database
 
