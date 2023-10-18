@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8" />
+     <meta charset="UTF-8">
      <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
-     />
-     <title>Projects - Admin</title>
+     >
+     <title>Admin Panel</title>
      <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
           crossorigin="anonymous"
-     />
+     >
 </head>
 
 <body>
@@ -22,7 +22,7 @@
           style="padding-left:6px;"
           data-bs-theme="dark"
      >
-     
+
           <!-- Navbar content -->
           <button
                class="btn btn-outline-light rounded-circle "
@@ -43,7 +43,7 @@
                          d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                </svg>
           </button>
-     
+
           <div
                class="offcanvas offcanvas-start bg-dark text-white"
                data-bs-backdrop="static"
@@ -53,7 +53,7 @@
           >
                <div class="offcanvas-header">
                     <!-- <img
-                         src="../logo-2.png"
+                         src="../Pictures/Logo/logo-2.png"
                          alt="img"
                          style="height: 3rem;width: 6rem;border-radius: 3rem;"
                          class="rounded"
@@ -291,310 +291,147 @@
                     right: -6px;
                     animation: zoom 3s 3s both infinite;
                }
-     
+
                .notification-bell {
                     animation: bell 1s 1s both infinite;
                }
-     
+
                @keyframes bell {
                     0% {
                          transform: rotate(0);
                     }
-     
+
                     10% {
                          transform: rotate(30deg);
                     }
-     
+
                     20% {
                          transform: rotate(0);
                     }
-     
+
                     80% {
                          transform: rotate(0);
                     }
-     
+
                     90% {
                          transform: rotate(-30deg);
                     }
-     
+
                     100% {
                          transform: rotate(0);
                     }
                }
-     
+
                @keyframes rad {
                     0% {
                          transform: translateX(0);
                     }
-     
+
                     10% {
                          transform: translateX(6px);
                     }
-     
+
                     20% {
                          transform: translateX(0);
                     }
-     
+
                     80% {
                          transform: translateX(0);
                     }
-     
+
                     90% {
                          transform: translateX(-6px);
                     }
-     
+
                     100% {
                          transform: translateX(0);
                     }
                }
-     
+
                @keyframes zoom {
                     0% {
                          opacity: 0;
                          transform: scale(0);
                     }
-     
+
                     10% {
                          opacity: 1;
                          transform: scale(1);
                     }
-     
+
                     50% {
                          opacity: 1;
                     }
-     
+
                     51% {
                          opacity: 0;
                     }
-     
+
                     100% {
                          opacity: 0;
                     }
                }
-     
+
                @keyframes moon-moving {
                     0% {
                          transform: translate(-200%, 600%);
                     }
-     
+
                     100% {
                          transform: translate(800%, -200%);
                     }
                }
           </style>
      </nav>
-     <!-- for cards -->
-     <a
-          href="/newProject"
-          style="text-decoration: none;"
-     ><button
-               type="submit"
-               style="padding: 4px 35px; border-radius: 2rem; background-color: black; color: white; font-size: large; font-weight: bold; margin-top: 2rem; margin-left: 2rem;"
-          >Add Project
-          </button></a>
-          <form action="/SearchProject" method="post">
-          <input style="margin-left: 2rem;" type="text" id="ProjectName" name="ProjectName" style="border-radius: 5%;" placeholder="Search Project">
-          <button type="submit" style="background-color: black; color: white; margin-top: 2rem;">Search</button></form>
-     <h1 style="margin-left: 2rem; margin-top: 1.5rem;">Projects:</h1>
-     <!-- Project list -->
-     <div class="container">
-          <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 text-xxl-end lh-base ">
-               <div class="col">
-                    <div class="p-3">
-                         <!-- row1 -->
+     
+     <!-- Add project -->
+     <section
+          class="vh-100"
+          style="background-color: #ffffff;"
+     >
+          <div class="container h-100 my-4">
+               <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-9">
+     
+                         <h1 class="text-dark mb-4">Add Project</h1>
+     
                          <div
                               class="card"
-                              style="width: 18rem;"
+                              style="border-radius: 15px;border: 2px solid black"
                          >
-                              <div class="card-body">
-                                   <h3
-                                        name="project1"
-                                        class="card-title bg-black text-white rounded py-3 text-center text-decoration-underline">
-                                        <%=projectdata.ProjectName%></h3>
-                                   <p class="card-text">
-                                        <b class="h5 fw-bold">Description:</b><br /><%=projectdata.ProjectDescription%>
-                                   </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b><%=projectdata.Date%>
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b><%=projectdata.NoBugs%></li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <a href="/projects"><button
-                                             type="submit"
-                                             id="more1"
-                                             class="text-white bg-dark rounded px-5 h5 py-2"
-                                        >More</button></a>
-                              </div>
+                              <form action="/addProject" method="post">
+                                   ProjectName <input type="text" id="ProjectName" name="ProjectName">
+                                   <br>
+                                   <br>
+                                   LeaderName <input type="text" id="LeaderName" name="LeaderName">
+                                   <br>
+                                   <br>
+                                   LeaderEmail <input type="email" id="LeaderEmail" name="LeaderEmail">
+                                   <br>
+                                   <br>
+                                   ProjectDescription <input type="text" id="ProjectDescription" name="ProjectDescription">
+                                   <br>
+                                   <br>
+                                   Date <input type="date" id="Date" name="Date">
+                                   <br>
+                                   <br>
+                                   Number of Bugs <input type="number" id="NoBugs" name="NoBugs">
+                                   <br>
+                                   <br>
+                                   <button id="add" name="add" style="background-color: black; color: white; padding: 5px 30px; border-radius: 5%;">Add</button>
+                              </form>
                          </div>
+     
                     </div>
                </div>
-               <!-- <div
-                    class="col"
-                    style="margin-left: 5rem;"
-               >
-                    <div class="p-3">
-                         <div
-                              class="card"
-                              style="width: 18rem"
-                         >
-                              <div class="card-body">
-                                   <h3
-                                        name="project2"
-                                        class="card-title bg-black text-white rounded py-3 text-decoration-underline text-center">
-                                        GitHub Explorer</h5>
-                                        <p class="card-text">
-                                             <b class="h5 fw-bold">Description:</b><br />Lorem ipsum dolor sit amet
-                                             consectetur adipisicing elit. Maxime molestiae sint ratione
-                                             nisi consectetur mollitia quos, ad nesciunt, doloribus
-                                             necessitatibus modi non. Impedit dolores debitis doloremque.
-                                        </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b>27/08/2023
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b>12</li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <button
-                                        type="submit"
-                                        id="more2"
-                                        class="text-white bg-dark rounded px-5 h5 py-2"
-                                   >More</button>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               
-               <div
-                    class="col"
-                    style="margin-left: 5rem;"
-               >
-                    <div class="p-3">
-                         <div
-                              class="card"
-                              style="width: 18rem"
-                         >
-                              <div class="card-body">
-                                   <h3
-                                        name="project3"
-                                        class="card-title bg-black text-white rounded py-3 text-decoration-underline text-center">
-                                        ICTA - 2024</h3>
-                                   <p class="card-text">
-                                        <b class="h5 fw-bold">Description:</b><br />Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Maxime molestiae sint ratione
-                                        nisi consectetur mollitia quos, ad nesciunt, doloribus
-                                        necessitatibus modi non. Impedit dolores debitis doloremque.
-                                   </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b>27/08/2023
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b>12</li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <button
-                                        type="submit"
-                                        id="more3"
-                                        class="text-white bg-dark rounded px-5 h5 py-2"
-                                   >More</button>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               
-               <div
-                    class="col"
-                    style="margin-left: 5rem;"
-               >
-                    <div class="p-3">
-                         <div
-                              class="card"
-                              style="width: 18rem"
-                         >
-                              <div class="card-body">
-                                   <h3
-                                        name="project4"
-                                        class="card-title bg-black text-white rounded py-3 text-decoration-underline text-center">
-                                        Jest</h3>
-                                   <p class="card-text">
-                                        <b class="h5 fw-bold">Description:</b><br />Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Maxime molestiae sint ratione
-                                        nisi consectetur mollitia quos, ad nesciunt, doloribus
-                                        necessitatibus modi non. Impedit dolores debitis doloremque.
-                                   </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b>27/08/2023
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b>12</li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <button
-                                        type="submit"
-                                        id="more4"
-                                        class="text-white bg-dark rounded px-5 h5 py-2"
-                                   >More</button>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               
-               <div
-                    class="col"
-                    style="margin-left: 5rem;"
-               >
-                    <div class="p-3">
-                         <div
-                              class="card"
-                              style="width: 18rem"
-                         >
-                              <div class="card-body">
-                                   <h3
-                                        name="project5"
-                                        class="card-title bg-black text-white rounded py-3 text-decoration-underline text-center">
-                                        Thanos</h3>
-                                   <p class="card-text">
-                                        <b class="h5 fw-bold">Description:</b><br />Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Maxime molestiae sint ratione
-                                        nisi consectetur mollitia quos, ad nesciunt, doloribus
-                                        necessitatibus modi non. Impedit dolores debitis doloremque.
-                                   </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b>27/08/2023
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b>12</li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <button
-                                        type="submit"
-                                        id="more5"
-                                        class="text-white bg-dark rounded px-5 h5 py-2"
-                                   >More</button>
-                              </div>
-                         </div>
-                    </div>
-               </div> -->
-               <!-- card-5 end -->
           </div>
-     </div>
-     <hr />
-     <!-- For footer  -->
+     </section>
+     <!-- Add project ends. -->
+     <!-- Footer -->
      <div
           class="container"
           id="hrefcontactus"
+          style="margin-top: 6rem;"
      >
           <div class="container">
                <footer class="py-5">
@@ -602,66 +439,48 @@
                          <div class="col-6 col-md-2 mb-3">
                               <h5>Section</h5>
                               <ul class="nav flex-column">
-                                   <li class="nav-item mb-2">
-                                        <a
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Home</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Home</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Features</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Features</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Pricing</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Pricing</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >FAQs</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >FAQs</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >About</a>
-                                   </li>
+                                        >About</a></li>
                               </ul>
                          </div>
 
                          <div class="col-6 col-md-2 mb-3">
                               <h5>Creators</h5>
                               <ul class="nav flex-column">
-                                   <li class="nav-item mb-2">
-                                        <a
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Ayush Naik</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Ayush Naik</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Parmesh Bhat</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Parmesh Bhat</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Rinkal Mav</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Rinkal Mav</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Contact Us</a>
-                                   </li>
+                                        >Contact Us</a></li>
                               </ul>
                          </div>
 
@@ -679,13 +498,11 @@
                                              type="text"
                                              class="form-control"
                                              placeholder="Email address"
-                                        />
+                                        >
                                         <button
                                              class="btn btn-primary"
                                              type="button"
-                                        >
-                                             Subscribe
-                                        </button>
+                                        >Subscribe</button>
                                    </div>
                               </form>
                          </div>
@@ -694,8 +511,7 @@
                     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                          <p>© 2023 Company, Inc. All rights reserved.</p>
                          <ul class="list-unstyled d-flex">
-                              <li class="ms-3">
-                                   <a
+                              <li class="ms-3"><a
                                         class="link-dark"
                                         href="#"
                                    ><svg
@@ -704,10 +520,8 @@
                                              height="24"
                                         >
                                              <use xlink:href="#twitter"></use>
-                                        </svg></a>
-                              </li>
-                              <li class="ms-3">
-                                   <a
+                                        </svg></a></li>
+                              <li class="ms-3"><a
                                         class="link-dark"
                                         href="#"
                                    ><svg
@@ -716,10 +530,8 @@
                                              height="24"
                                         >
                                              <use xlink:href="#instagram"></use>
-                                        </svg></a>
-                              </li>
-                              <li class="ms-3">
-                                   <a
+                                        </svg></a></li>
+                              <li class="ms-3"><a
                                         class="link-dark"
                                         href="#"
                                    ><svg
@@ -728,13 +540,13 @@
                                              height="24"
                                         >
                                              <use xlink:href="#facebook"></use>
-                                        </svg></a>
-                              </li>
+                                        </svg></a></li>
                          </ul>
                     </div>
                </footer>
           </div>
      </div>
+
      <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

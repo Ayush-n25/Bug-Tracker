@@ -1,0 +1,12 @@
+What is bug tracking?
+Bug tracking is the process of recording and managing bugs that occur in software development.
+
+How does collaboration help in bug resolution?
+Collaboration allows team members to work together, share information, and collectively resolve bugs more efficiently.
+
+What is project planning?
+Project planning involves organizing and scheduling tasks, setting milestones, and tracking progress to ensure successful project completion.
+
+Can I prioritize and assign tasks to team members?
+Yes, our system allows you to prioritize and assign tasks to team members, ensuring efficient task management.
+

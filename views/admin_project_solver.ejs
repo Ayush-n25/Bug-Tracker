@@ -18,12 +18,14 @@
 
 <body>
      <nav
-          class="navbar bg-dark border-bottom border-body "
+          class="navbar bg-dark border-bottom border-body rounded mx-2"
+          style="padding-left:6px;"
           data-bs-theme="dark"
      >
+     
           <!-- Navbar content -->
           <button
-               class="btn btn-outline-light rounded-circle"
+               class="btn btn-outline-light rounded-circle "
                type="button"
                data-bs-toggle="offcanvas"
                data-bs-target="#staticBackdrop"
@@ -31,17 +33,17 @@
           >
                <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
+                    width="25"
+                    height="25"
                     fill="currentColor"
-                    class="bi bi-caret-right-fill"
+                    class="bi bi-caret-right-fill rounded-circle"
                     viewBox="0 0 16 16"
                >
                     <path
                          d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                </svg>
           </button>
-
+     
           <div
                class="offcanvas offcanvas-start bg-dark text-white"
                data-bs-backdrop="static"
@@ -50,16 +52,21 @@
                aria-labelledby="staticBackdropLabel"
           >
                <div class="offcanvas-header">
-                    <img
-                         src="Logo.jpg"
-                         alt=""
-                         style="height: 3rem;width: 3rem;border-radius: 3rem;"
-                    >
+                    <!-- <img
+                         src="../Pictures/Logo/logo-2.png"
+                         alt="img"
+                         style="height: 3rem;width: 6rem;border-radius: 3rem;"
+                         class="rounded"
+                    > -->
                     <h5
                          class="offcanvas-title"
                          id="staticBackdropLabel"
                          style="padding-right: 2rem;"
-                    >DefectMonitor</h5>
+                    ><a
+                              href='#'
+                              class="text-white"
+                              style="text-decoration:none"
+                         >DefectMonitor</a></h5>
                     <button
                          type="button"
                          class="btn-close bg-white"
@@ -69,7 +76,11 @@
                </div>
                <div class="offcanvas-body">
                     <ul>
-                         <p style="font-size: larger;"><a href="adminHome.html"><button
+                         <a
+                              href="/"
+                              style="text-decoration: none;"
+                         >
+                              <p style="font-size: larger;"><button
                                         class="btn btn-outline-light "
                                         style="border-radius: 10rem;"
                                    ><svg
@@ -82,11 +93,14 @@
                                         >
                                              <path
                                                   d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
-                                        </svg></button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Home
+                                        </svg></button>
+                         </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Home
                          </p>
                          <p style="font-size: larger;">
-                              <a href="adminProject.html">
-                                   <button
+                              <a
+                                   href='/ProjectDetails'
+                                   style="text-decoration:none"
+                              ><button
                                         class="btn btn-outline-light "
                                         style="border-radius: 10rem;"
                                    >
@@ -103,156 +117,271 @@
                                              <path
                                                   d="M13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5H13zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975z" />
                                         </svg>
-                                   </button>
-                              </a>
+                                   </button></a>
                               &nbsp;&nbsp;&nbsp;&nbsp;Project
                          </p>
                          <p style="font-size: larger;">
-                              <button
-                                   class="btn btn-outline-light "
-                                   style="border-radius: 10rem;"
-                              >
-                                   <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="30"
-                                        height="30"
-                                        fill="currentColor"
-                                        class="bi bi-database-fill"
-                                        viewBox="0 0 16 16"
+                              <a
+                                   href="/logs"
+                                   style="text-decoration: none;"
+                              ><button
+                                        class="btn btn-outline-light "
+                                        style="border-radius: 10rem;"
                                    >
-                                        <path
-                                             d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223Z" />
-                                        <path
-                                             d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
-                                        <path
-                                             d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
-                                        <path
-                                             d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
-                                   </svg>
-                              </button>
+                                        <svg
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="30"
+                                             height="30"
+                                             fill="currentColor"
+                                             class="bi bi-database-fill"
+                                             viewBox="0 0 16 16"
+                                        >
+                                             <path
+                                                  d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223Z" />
+                                             <path
+                                                  d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
+                                             <path
+                                                  d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
+                                             <path
+                                                  d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
+                                        </svg>
+                                   </button></a>
                               &nbsp;&nbsp;&nbsp;&nbsp;Logs
                          </p>
                          <p style="font-size: larger;">
-                              <button
-                                   class="btn btn-outline-light "
-                                   style="border-radius: 10rem;"
+                              <a
+                                   href="/notes"
+                                   style="text-decoration: none;"
                               >
-                                   <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="30"
-                                        height="30"
-                                        fill="currentColor"
-                                        class="bi bi-sticky-fill"
-                                        viewBox="0 0 16 16"
+                                   <button
+                                        class="btn btn-outline-light "
+                                        style="border-radius: 10rem;"
                                    >
-                                        <path
-                                             d="M2.5 1A1.5 1.5 0 0 0 1 2.5v11A1.5 1.5 0 0 0 2.5 15h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 15 8.586V2.5A1.5 1.5 0 0 0 13.5 1h-11zm6 8.5a1 1 0 0 1 1-1h4.396a.25.25 0 0 1 .177.427l-5.146 5.146a.25.25 0 0 1-.427-.177V9.5z" />
-                                   </svg>
-                              </button>
+                                        <svg
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="30"
+                                             height="30"
+                                             fill="currentColor"
+                                             class="bi bi-sticky-fill"
+                                             viewBox="0 0 16 16"
+                                        >
+                                             <path
+                                                  d="M2.5 1A1.5 1.5 0 0 0 1 2.5v11A1.5 1.5 0 0 0 2.5 15h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 15 8.586V2.5A1.5 1.5 0 0 0 13.5 1h-11zm6 8.5a1 1 0 0 1 1-1h4.396a.25.25 0 0 1 .177.427l-5.146 5.146a.25.25 0 0 1-.427-.177V9.5z" />
+                                        </svg>
+                                   </button></a>
                               &nbsp;&nbsp;&nbsp;&nbsp;Notes
                          </p>
                          <p style="font-size: larger;">
-                              <button
-                                   class="btn btn-outline-light "
-                                   style="border-radius: 10rem;"
-                              >
-                                   <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="30"
-                                        height="30"
-                                        fill="currentColor"
-                                        class="bi bi-gear-fill"
-                                        viewBox="0 0 16 16"
+                              <a
+                                   href="/help"
+                                   style="text-decoration: none;"
+                              ><button
+                                        class="btn btn-outline-light "
+                                        style="border-radius: 10rem;"
                                    >
-                                        <path
-                                             d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
-                                   </svg>
-                              </button>
-                              &nbsp;&nbsp;&nbsp;&nbsp;Settings
-                         </p>
-
-                         <p style="font-size: larger;">
-                              <button
-                                   class="btn btn-outline-light "
-                                   style="border-radius: 10rem;"
-                              >
-                                   <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="30"
-                                        height="30"
-                                        fill="currentColor"
-                                        class="bi bi-question-diamond-fill"
-                                        viewBox="0 0 16 16"
-                                   >
-                                        <path
-                                             d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM5.495 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z" />
-                                   </svg>
-                              </button>
+                                        <svg
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="30"
+                                             height="30"
+                                             fill="currentColor"
+                                             class="bi bi-question-diamond-fill"
+                                             viewBox="0 0 16 16"
+                                        >
+                                             <path
+                                                  d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM5.495 6.033a.237.237 0 0 1-.24-.247C5.35 4.091 6.737 3.5 8.005 3.5c1.396 0 2.672.73 2.672 2.24 0 1.08-.635 1.594-1.244 2.057-.737.559-1.01.768-1.01 1.486v.105a.25.25 0 0 1-.25.25h-.81a.25.25 0 0 1-.25-.246l-.004-.217c-.038-.927.495-1.498 1.168-1.987.59-.444.965-.736.965-1.371 0-.825-.628-1.168-1.314-1.168-.803 0-1.253.478-1.342 1.134-.018.137-.128.25-.266.25h-.825zm2.325 6.443c-.584 0-1.009-.394-1.009-.927 0-.552.425-.94 1.01-.94.609 0 1.028.388 1.028.94 0 .533-.42.927-1.029.927z" />
+                                        </svg>
+                                   </button></a>
                               &nbsp;&nbsp;&nbsp;&nbsp;Help
                          </p>
                          <p style="font-size: larger;">
-                              <button
-                                   class="btn btn-outline-light "
-                                   style="border-radius: 10rem;"
-                              >
-                                   <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="30"
-                                        height="30"
-                                        fill="currentColor"
-                                        class="bi bi-envelope-at-fill"
-                                        viewBox="0 0 16 16"
+                              <a
+                                   href="/contact"
+                                   style="text-decoration: none;"
+                              ><button
+                                        class="btn btn-outline-light "
+                                        style="border-radius: 10rem;"
                                    >
-                                        <path
-                                             d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
-                                        <path
-                                             d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
-                                   </svg>
-                              </button>
+                                        <svg
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="30"
+                                             height="30"
+                                             fill="currentColor"
+                                             class="bi bi-envelope-at-fill"
+                                             viewBox="0 0 16 16"
+                                        >
+                                             <path
+                                                  d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
+                                             <path
+                                                  d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
+                                        </svg>
+                                   </button></a>
                               &nbsp;&nbsp;&nbsp;&nbsp;Contact
+                         </p>
+                         <p style="font-size: larger;">
+                              <a
+                                   href="/setting"
+                                   style="text-decoration: none;"
+                              ><button
+                                        class="btn btn-outline-light "
+                                        style="border-radius: 10rem;"
+                                   >
+                                        <svg
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="30"
+                                             height="30"
+                                             fill="currentColor"
+                                             class="bi bi-gear-fill"
+                                             viewBox="0 0 16 16"
+                                        >
+                                             <path
+                                                  d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                        </svg>
+                                   </button></a>
+                              &nbsp;&nbsp;&nbsp;&nbsp;Settings
+                         </p>
+                         <p style="font-size: larger;">
+                              <a
+                                   href="/profile"
+                                   style="text-decoration: none;"
+                              ><button
+                                        class="btn btn-outline-light "
+                                        style="border-radius: 10rem;"
+                                   >
+                                        <svg
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="30"
+                                             height="30"
+                                             fill="currentColor"
+                                             class="bi bi-person-fill"
+                                             viewBox="0 0 16 16"
+                                        >
+                                             <path
+                                                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                                        </svg>
+                                        </svg>
+                                   </button></a>
+                              &nbsp;&nbsp;&nbsp;&nbsp;Profile
                          </p>
                     </ul>
                </div>
           </div>
-          <div
-               class="container text-white"
-               style="width:50rem;"
-          >
-               <marquee>Welcome to Defect Monitor system !</marquee>
+          <div class="container text-white">
+               <marquee class="mx-5 fw-bold">Welcome to Defect Monitor system !</marquee>
           </div>
-          <button
-               type="button"
-               class="btn btn-outline-light rounded-circle"
-               style="margin-right: 2rem;"
-          >
-               <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-bell-fill"
-                    viewBox="0 0 16 16"
+          <a href="/notification"><button
+                    type="button"
+                    class="btn btn-outline-light rounded notification_count notification-bell"
+                    style="margin-right: 0.5rem"
                >
-                    <path
-                         d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-               </svg>
-          </button>
-          <button
-               type="button"
-               class="btn btn-outline-success rounded-circle"
-               style="margin-right: 2rem;"
-          >
-               <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-person-fill"
-                    viewBox="0 0 16 16"
-               >
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-               </svg>
-          </button>
+                    <svg
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="16"
+                         height="16"
+                         fill="currentColor"
+                         class="bi bi-bell-fill"
+                         viewBox="0 0 16 16"
+                    >
+                         <path
+                              d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                    </svg>
+                    6</button></a>
+          <style>
+               .notification_count {
+                    top: -6px;
+                    right: -6px;
+                    animation: zoom 3s 3s both infinite;
+               }
+     
+               .notification-bell {
+                    animation: bell 1s 1s both infinite;
+               }
+     
+               @keyframes bell {
+                    0% {
+                         transform: rotate(0);
+                    }
+     
+                    10% {
+                         transform: rotate(30deg);
+                    }
+     
+                    20% {
+                         transform: rotate(0);
+                    }
+     
+                    80% {
+                         transform: rotate(0);
+                    }
+     
+                    90% {
+                         transform: rotate(-30deg);
+                    }
+     
+                    100% {
+                         transform: rotate(0);
+                    }
+               }
+     
+               @keyframes rad {
+                    0% {
+                         transform: translateX(0);
+                    }
+     
+                    10% {
+                         transform: translateX(6px);
+                    }
+     
+                    20% {
+                         transform: translateX(0);
+                    }
+     
+                    80% {
+                         transform: translateX(0);
+                    }
+     
+                    90% {
+                         transform: translateX(-6px);
+                    }
+     
+                    100% {
+                         transform: translateX(0);
+                    }
+               }
+     
+               @keyframes zoom {
+                    0% {
+                         opacity: 0;
+                         transform: scale(0);
+                    }
+     
+                    10% {
+                         opacity: 1;
+                         transform: scale(1);
+                    }
+     
+                    50% {
+                         opacity: 1;
+                    }
+     
+                    51% {
+                         opacity: 0;
+                    }
+     
+                    100% {
+                         opacity: 0;
+                    }
+               }
+     
+               @keyframes moon-moving {
+                    0% {
+                         transform: translate(-200%, 600%);
+                    }
+     
+                    100% {
+                         transform: translate(800%, -200%);
+                    }
+               }
+          </style>
      </nav>
      <!-- Main Content or Project Stats -->
      <div
@@ -618,7 +747,7 @@
                     </div>
 
                     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                         <p>© 2022 Company, Inc. All rights reserved.</p>
+                         <p>© 2023 Company, Inc. All rights reserved.</p>
                          <ul class="list-unstyled d-flex">
                               <li class="ms-3"><a
                                         class="link-dark"

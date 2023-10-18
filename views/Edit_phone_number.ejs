@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8" />
+     <meta charset="UTF-8">
      <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
-     />
-     <title>Projects - Admin</title>
+     >
+     <title>Change Phone Number</title>
      <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
           crossorigin="anonymous"
-     />
+     >
 </head>
 
 <body>
@@ -22,7 +22,7 @@
           style="padding-left:6px;"
           data-bs-theme="dark"
      >
-     
+
           <!-- Navbar content -->
           <button
                class="btn btn-outline-light rounded-circle "
@@ -43,7 +43,7 @@
                          d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                </svg>
           </button>
-     
+
           <div
                class="offcanvas offcanvas-start bg-dark text-white"
                data-bs-backdrop="static"
@@ -52,12 +52,12 @@
                aria-labelledby="staticBackdropLabel"
           >
                <div class="offcanvas-header">
-                    <!-- <img
-                         src="../logo-2.png"
+                    <img
+                         src="../Pictures/Logo/logo-2.png"
                          alt="img"
                          style="height: 3rem;width: 6rem;border-radius: 3rem;"
                          class="rounded"
-                    > -->
+                    >
                     <h5
                          class="offcanvas-title"
                          id="staticBackdropLabel"
@@ -291,307 +291,349 @@
                     right: -6px;
                     animation: zoom 3s 3s both infinite;
                }
-     
+
                .notification-bell {
                     animation: bell 1s 1s both infinite;
                }
-     
+
                @keyframes bell {
                     0% {
                          transform: rotate(0);
                     }
-     
+
                     10% {
                          transform: rotate(30deg);
                     }
-     
+
                     20% {
                          transform: rotate(0);
                     }
-     
+
                     80% {
                          transform: rotate(0);
                     }
-     
+
                     90% {
                          transform: rotate(-30deg);
                     }
-     
+
                     100% {
                          transform: rotate(0);
                     }
                }
-     
+
                @keyframes rad {
                     0% {
                          transform: translateX(0);
                     }
-     
+
                     10% {
                          transform: translateX(6px);
                     }
-     
+
                     20% {
                          transform: translateX(0);
                     }
-     
+
                     80% {
                          transform: translateX(0);
                     }
-     
+
                     90% {
                          transform: translateX(-6px);
                     }
-     
+
                     100% {
                          transform: translateX(0);
                     }
                }
-     
+
                @keyframes zoom {
                     0% {
                          opacity: 0;
                          transform: scale(0);
                     }
-     
+
                     10% {
                          opacity: 1;
                          transform: scale(1);
                     }
-     
+
                     50% {
                          opacity: 1;
                     }
-     
+
                     51% {
                          opacity: 0;
                     }
-     
+
                     100% {
                          opacity: 0;
                     }
                }
-     
+
                @keyframes moon-moving {
                     0% {
                          transform: translate(-200%, 600%);
                     }
-     
+
                     100% {
                          transform: translate(800%, -200%);
                     }
                }
           </style>
      </nav>
-     <!-- for cards -->
-     <a
-          href="/newProject"
-          style="text-decoration: none;"
-     ><button
-               type="submit"
-               style="padding: 4px 35px; border-radius: 2rem; background-color: black; color: white; font-size: large; font-weight: bold; margin-top: 2rem; margin-left: 2rem;"
-          >Add Project
-          </button></a>
-          <form action="/SearchProject" method="post">
-          <input style="margin-left: 2rem;" type="text" id="ProjectName" name="ProjectName" style="border-radius: 5%;" placeholder="Search Project">
-          <button type="submit" style="background-color: black; color: white; margin-top: 2rem;">Search</button></form>
-     <h1 style="margin-left: 2rem; margin-top: 1.5rem;">Projects:</h1>
-     <!-- Project list -->
-     <div class="container">
-          <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 text-xxl-end lh-base ">
-               <div class="col">
-                    <div class="p-3">
-                         <!-- row1 -->
-                         <div
-                              class="card"
-                              style="width: 18rem;"
-                         >
-                              <div class="card-body">
-                                   <h3
-                                        name="project1"
-                                        class="card-title bg-black text-white rounded py-3 text-center text-decoration-underline">
-                                        <%=projectdata.ProjectName%></h3>
-                                   <p class="card-text">
-                                        <b class="h5 fw-bold">Description:</b><br /><%=projectdata.ProjectDescription%>
-                                   </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b><%=projectdata.Date%>
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b><%=projectdata.NoBugs%></li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <a href="/projects"><button
-                                             type="submit"
-                                             id="more1"
-                                             class="text-white bg-dark rounded px-5 h5 py-2"
-                                        >More</button></a>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <!-- <div
-                    class="col"
-                    style="margin-left: 5rem;"
+     <div class="mainDiv">
+          <div class="cardStyle">
+               <form
+                    action=""
+                    method="post"
+                    name="signupForm"
+                    id="signupForm"
                >
-                    <div class="p-3">
-                         <div
-                              class="card"
-                              style="width: 18rem"
+
+                    <h2 class="formTitle">
+                         Change Phone Number
+                    </h2>
+
+                    <div class="inputDiv">
+                         <label
+                              class="inputLabel"
+                              for="Username"
+                         >Username</label>
+                         <input
+                              type="text"
+                              id="Username"
+                              name="Username"
+                              required
                          >
-                              <div class="card-body">
-                                   <h3
-                                        name="project2"
-                                        class="card-title bg-black text-white rounded py-3 text-decoration-underline text-center">
-                                        GitHub Explorer</h5>
-                                        <p class="card-text">
-                                             <b class="h5 fw-bold">Description:</b><br />Lorem ipsum dolor sit amet
-                                             consectetur adipisicing elit. Maxime molestiae sint ratione
-                                             nisi consectetur mollitia quos, ad nesciunt, doloribus
-                                             necessitatibus modi non. Impedit dolores debitis doloremque.
-                                        </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b>27/08/2023
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b>12</li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <button
-                                        type="submit"
-                                        id="more2"
-                                        class="text-white bg-dark rounded px-5 h5 py-2"
-                                   >More</button>
-                              </div>
-                         </div>
                     </div>
-               </div>
-               
-               <div
-                    class="col"
-                    style="margin-left: 5rem;"
-               >
-                    <div class="p-3">
-                         <div
-                              class="card"
-                              style="width: 18rem"
+
+                    <div class="inputDiv">
+                         <label
+                              class="inputLabel"
+                              for="Password"
+                         >Password</label>
+                         <input
+                              type="password"
+                              id="Password"
+                              name="Password"
+                              required
                          >
-                              <div class="card-body">
-                                   <h3
-                                        name="project3"
-                                        class="card-title bg-black text-white rounded py-3 text-decoration-underline text-center">
-                                        ICTA - 2024</h3>
-                                   <p class="card-text">
-                                        <b class="h5 fw-bold">Description:</b><br />Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Maxime molestiae sint ratione
-                                        nisi consectetur mollitia quos, ad nesciunt, doloribus
-                                        necessitatibus modi non. Impedit dolores debitis doloremque.
-                                   </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b>27/08/2023
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b>12</li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <button
-                                        type="submit"
-                                        id="more3"
-                                        class="text-white bg-dark rounded px-5 h5 py-2"
-                                   >More</button>
-                              </div>
-                         </div>
                     </div>
-               </div>
-               
-               <div
-                    class="col"
-                    style="margin-left: 5rem;"
-               >
-                    <div class="p-3">
-                         <div
-                              class="card"
-                              style="width: 18rem"
+
+                    <div class="inputDiv">
+                         <label
+                              class="inputLabel"
+                              for="PhoneNumber"
+                         >New Phone Number</label>
+                         <input
+                              type="number"
+                              id="PhoneNumber"
+                              name="PhoneNumber"
+                              min="10"
+                              max="10"
+                              required
                          >
-                              <div class="card-body">
-                                   <h3
-                                        name="project4"
-                                        class="card-title bg-black text-white rounded py-3 text-decoration-underline text-center">
-                                        Jest</h3>
-                                   <p class="card-text">
-                                        <b class="h5 fw-bold">Description:</b><br />Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Maxime molestiae sint ratione
-                                        nisi consectetur mollitia quos, ad nesciunt, doloribus
-                                        necessitatibus modi non. Impedit dolores debitis doloremque.
-                                   </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b>27/08/2023
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b>12</li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <button
-                                        type="submit"
-                                        id="more4"
-                                        class="text-white bg-dark rounded px-5 h5 py-2"
-                                   >More</button>
-                              </div>
-                         </div>
                     </div>
-               </div>
-               
-               <div
-                    class="col"
-                    style="margin-left: 5rem;"
-               >
-                    <div class="p-3">
-                         <div
-                              class="card"
-                              style="width: 18rem"
+
+                    <div class="buttonWrapper">
+                         <button
+                              type="submit"
+                              id="submitButton"
+                              onclick="validateSignupForm()"
+                              class="submitButton pure-button pure-button-primary"
                          >
-                              <div class="card-body">
-                                   <h3
-                                        name="project5"
-                                        class="card-title bg-black text-white rounded py-3 text-decoration-underline text-center">
-                                        Thanos</h3>
-                                   <p class="card-text">
-                                        <b class="h5 fw-bold">Description:</b><br />Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Maxime molestiae sint ratione
-                                        nisi consectetur mollitia quos, ad nesciunt, doloribus
-                                        necessitatibus modi non. Impedit dolores debitis doloremque.
-                                   </p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                   <li class="list-group-item">
-                                        <b>Date of creation: </b>27/08/2023
-                                   </li>
-                                   <li class="list-group-item"><b>Total Number of Bugs: </b>12</li>
-                                   <li class="list-group-item"><b>Total Number of people: </b>5</li>
-                              </ul>
-                              <div class="card-body text-center">
-                                   <button
-                                        type="submit"
-                                        id="more5"
-                                        class="text-white bg-dark rounded px-5 h5 py-2"
-                                   >More</button>
-                              </div>
-                         </div>
+                              <span>Continue</span>
+                              <span id="loader"></span>
+                         </button>
                     </div>
-               </div> -->
-               <!-- card-5 end -->
+
+               </form>
           </div>
+          <style>
+               .mainDiv {
+                    display: flex;
+                    min-height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #f9f9f9;
+                    font-family: 'Open Sans', sans-serif;
+               }
+
+               .cardStyle {
+                    width: 500px;
+                    border-color: white;
+                    background: #fff;
+                    padding: 36px 0;
+                    border-radius: 4px;
+                    margin: 30px 0;
+                    box-shadow: 0px 0 2px 0 rgba(0, 0, 0, 0.25);
+               }
+
+               #signupLogo {
+                    max-height: 100px;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+               }
+
+               .formTitle {
+                    font-weight: 600;
+                    margin-top: 20px;
+                    color: #2F2D3B;
+                    text-align: center;
+               }
+
+               .inputLabel {
+                    font-size: 12px;
+                    color: #555;
+                    margin-bottom: 6px;
+                    margin-top: 24px;
+               }
+
+               .inputDiv {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: auto;
+               }
+
+               input {
+                    height: 40px;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    border: none;
+                    border: solid 1px #ccc;
+                    padding: 0 11px;
+               }
+
+               input:disabled {
+                    cursor: not-allowed;
+                    border: solid 1px #eee;
+               }
+
+               .buttonWrapper {
+                    margin-top: 40px;
+               }
+
+               .submitButton {
+                    width: 70%;
+                    height: 40px;
+                    margin: auto;
+                    display: block;
+                    color: #fff;
+                    background-color: #065492;
+                    border-color: #065492;
+                    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+                    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+                    border-radius: 4px;
+                    font-size: 14px;
+                    cursor: pointer;
+               }
+
+               .submitButton:disabled,
+               button[disabled] {
+                    border: 1px solid #cccccc;
+                    background-color: #cccccc;
+                    color: #666666;
+               }
+
+               #loader {
+                    position: absolute;
+                    z-index: 1;
+                    margin: -2px 0 0 10px;
+                    border: 4px solid #f3f3f3;
+                    border-radius: 50%;
+                    border-top: 4px solid #666666;
+                    width: 14px;
+                    height: 14px;
+                    -webkit-animation: spin 2s linear infinite;
+                    animation: spin 2s linear infinite;
+               }
+
+               @keyframes spin {
+                    0% {
+                         transform: rotate(0deg);
+                    }
+
+                    100% {
+                         transform: rotate(360deg);
+                    }
+               }
+          </style>
+          <script>
+               var password = document.getElementById("password")
+                    , confirm_password = document.getElementById("confirmPassword");
+
+               document.getElementById('signupLogo').src = "https://s3-us-west-2.amazonaws.com/shipsy-public-assets/shipsy/SHIPSY_LOGO_BIRD_BLUE.png";
+               enableSubmitButton();
+
+               function validatePassword() {
+                    if (password.value != confirm_password.value) {
+                         confirm_password.setCustomValidity("Passwords Don't Match");
+                         return false;
+                    } else {
+                         confirm_password.setCustomValidity('');
+                         return true;
+                    }
+               }
+
+               password.onchange = validatePassword;
+               confirm_password.onkeyup = validatePassword;
+
+               function enableSubmitButton() {
+                    document.getElementById('submitButton').disabled = false;
+                    document.getElementById('loader').style.display = 'none';
+               }
+
+               function disableSubmitButton() {
+                    document.getElementById('submitButton').disabled = true;
+                    document.getElementById('loader').style.display = 'unset';
+               }
+
+               function validateSignupForm() {
+                    var form = document.getElementById('signupForm');
+
+                    for (var i = 0; i < form.elements.length; i++) {
+                         if (form.elements[i].value === '' && form.elements[i].hasAttribute('required')) {
+                              console.log('There are some required fields!');
+                              return false;
+                         }
+                    }
+
+                    if (!validatePassword()) {
+                         return false;
+                    }
+
+                    onSignup();
+               }
+
+               function onSignup() {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+
+                         disableSubmitButton();
+
+                         if (this.readyState == 4 && this.status == 200) {
+                              enableSubmitButton();
+                         }
+                         else {
+                              console.log('AJAX call failed!');
+                              setTimeout(function () {
+                                   enableSubmitButton();
+                              }, 1000);
+                         }
+
+                    };
+
+                    xhttp.open("GET", "ajax_info.txt", true);
+                    xhttp.send();
+               }
+          </script>
      </div>
-     <hr />
-     <!-- For footer  -->
+
+     <!-- Footer -->
      <div
           class="container"
           id="hrefcontactus"
@@ -602,66 +644,48 @@
                          <div class="col-6 col-md-2 mb-3">
                               <h5>Section</h5>
                               <ul class="nav flex-column">
-                                   <li class="nav-item mb-2">
-                                        <a
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Home</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Home</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Features</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Features</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Pricing</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Pricing</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >FAQs</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >FAQs</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >About</a>
-                                   </li>
+                                        >About</a></li>
                               </ul>
                          </div>
 
                          <div class="col-6 col-md-2 mb-3">
                               <h5>Creators</h5>
                               <ul class="nav flex-column">
-                                   <li class="nav-item mb-2">
-                                        <a
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Ayush Naik</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Ayush Naik</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Parmesh Bhat</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Parmesh Bhat</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Rinkal Mav</a>
-                                   </li>
-                                   <li class="nav-item mb-2">
-                                        <a
+                                        >Rinkal Mav</a></li>
+                                   <li class="nav-item mb-2"><a
                                              href="#"
                                              class="nav-link p-0 text-muted"
-                                        >Contact Us</a>
-                                   </li>
+                                        >Contact Us</a></li>
                               </ul>
                          </div>
 
@@ -679,13 +703,11 @@
                                              type="text"
                                              class="form-control"
                                              placeholder="Email address"
-                                        />
+                                        >
                                         <button
                                              class="btn btn-primary"
                                              type="button"
-                                        >
-                                             Subscribe
-                                        </button>
+                                        >Subscribe</button>
                                    </div>
                               </form>
                          </div>
@@ -694,8 +716,7 @@
                     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                          <p>© 2023 Company, Inc. All rights reserved.</p>
                          <ul class="list-unstyled d-flex">
-                              <li class="ms-3">
-                                   <a
+                              <li class="ms-3"><a
                                         class="link-dark"
                                         href="#"
                                    ><svg
@@ -704,10 +725,8 @@
                                              height="24"
                                         >
                                              <use xlink:href="#twitter"></use>
-                                        </svg></a>
-                              </li>
-                              <li class="ms-3">
-                                   <a
+                                        </svg></a></li>
+                              <li class="ms-3"><a
                                         class="link-dark"
                                         href="#"
                                    ><svg
@@ -716,10 +735,8 @@
                                              height="24"
                                         >
                                              <use xlink:href="#instagram"></use>
-                                        </svg></a>
-                              </li>
-                              <li class="ms-3">
-                                   <a
+                                        </svg></a></li>
+                              <li class="ms-3"><a
                                         class="link-dark"
                                         href="#"
                                    ><svg
@@ -728,13 +745,13 @@
                                              height="24"
                                         >
                                              <use xlink:href="#facebook"></use>
-                                        </svg></a>
-                              </li>
+                                        </svg></a></li>
                          </ul>
                     </div>
                </footer>
           </div>
      </div>
+
      <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

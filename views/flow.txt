@@ -1,0 +1,7 @@
+admin:
+
+adminHome - navbar -> admin_project_details -> click on particular project more -> goes to that admin_Project_Name -> More -> admin_project_review.
+
+Solver:
+
+adminHome - navbar -> admin_project_details -> click on particular project more -> goes to that admin_Project_Name -> More -> admin_project_solver

@@ -9,7 +9,7 @@
   />
   <link
     rel="shortcut icon"
-    href="../../../Pictures/Logo/logo-2.png"
+    href="../logo-2.png"
     style="height: 38; width: 60;"
   />
   <title>DefectMonitor</title>
@@ -19,6 +19,10 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
     crossorigin="anonymous"
   />
+  <link
+    href="./input.css"
+    rel="stylesheet"
+  >
 </head>
 <style>
   .cimg {
@@ -32,17 +36,17 @@
     data-bs-theme="dark"
   >
     <div class="container-fluid">
-      <img
-        src="../../../Pictures/Logo/logo-2.png"
+      <!-- <img
+        src="../logo-2.png"
         alt="BTS"
         width="60"
         height="38"
         margin-right="5"
         class="rounded"
-      >
+      > -->
       <a
         class="navbar-brand mx-2"
-        href="#"
+        href="https://www.ibm.com/topics/bug-tracking"
       >DefectMonitor</a>
       <button
         class="navbar-toggler"
@@ -67,17 +71,11 @@
               href="/home"
             >Home</a>
           </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              target="_blank"
-              href="https://www.ibm.com/topics/bug-tracking"
-            >DefectMonitor</a>
           </li>
           <li class="nav-item">
             <a
               class="nav-link"
-              href="#"
+              href="#features"
             >Solution</a>
           </li>
           <li class="nav-item">
@@ -89,7 +87,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="#"
+              href="#support"
             >Support Us</a>
           </li>
           <li class="nav-item">
@@ -98,6 +96,13 @@
               class="nav-link"
               href="/contact"
             >Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <!-- CONTACT US -->
+            <a
+              class="nav-link"
+              href="#FAQs"
+            >FAQs</a>
           </li>
           <li class="nav-item">
             <a
@@ -182,24 +187,38 @@
                         type="text"
                         class="form-control"
                         id="exampleFormControlInput1"
-                        placeholder="name@example.com"
+                        placeholder="@username"
                         required
                         name="Username"
                       >
                     </div>
                     <div class="md-3">
                       <label
-                        for="inputPassword5"
+                        for="Password"
                         class="form-label fw-bold text-light"
                       >Password</label>
                       <input
                         type="password"
-                        id="inputPassword5"
+                        id="Password"
                         class="form-control"
                         aria-describedby="passwordHelpBlock"
                         required
                         name="Password"
                       >
+                      <input
+                        type="checkbox"
+                        onclick="myFunction()"
+                      >Show Password
+                      <script>
+                        function myFunction() {
+                          var x = document.getElementById("Password");
+                          if (x.type === "password") {
+                            x.type = "text";
+                          } else {
+                            x.type = "password";
+                          }
+                        }
+                      </script>
                       <div
                         id="passwordHelpBlock"
                         class="form-text"
@@ -207,6 +226,7 @@
                         <a
                           href="/forgotpassword"
                           class="text-primary"
+                          style="text-decoration: none;"
                         >Forgot Password?</a>
                       </div>
                     </div>
@@ -395,7 +415,21 @@
                         aria-describedby="passwordHelpBlock"
                         required
                         name="Password"
-                      >
+                      />
+                      <input
+                        type="checkbox"
+                        onclick="myFunction()"
+                      >Show Password
+                      <script>
+                        function myFunction() {
+                            var x = document.getElementById("Password");
+                            if (x.type === "password") {
+                              x.type = "text";
+                            } else {
+                              x.type = "password";
+                            }
+                          }
+                      </script>
                       <div
                         id="passwordHelpBlock"
                         class="form-text text-danger"
@@ -562,6 +596,67 @@
     </div>
   </div>
   <br><br><br><br>
+  <section
+    id="features"
+    class="p-4 sm:px-8 lg:px-16 pb-6 sm:pb-16 md:pb-24 relative py-16 text-white my-4 rounded-4"
+    style="background-color: #64748b; margin: 5.4rem 5.4rem;"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="mx-auto mb-8 sm:mb-16 text-center">
+        <h2
+          class="font-semibold fw-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl sm:leading-tight tracking-tight text-white max-w-4xl mx-auto mb-2"
+        >Solution</h2>
+      </div>
+      <div
+        class="flex rounded-3xl p-8 md:p-16 flex-wrap gap-x-20 gap-y-10 sm:gap-y-24"
+        style="background: rgba(192, 200, 210, 0.2)"
+      >
+        <div class="lg:flex-[1_1_30%] mx-auto">
+          <span class="font-semibold font-custom text-9xl md:text-9xl h2 text-white block sm:mb-6 fw-bold">01 Bug
+          Tracking</span>
+          <!-- <h3 class="font-semibold font-custom text-3xl lg:text-3xl lg:leading-none text-white max-w-4xl mx-auto mb-1">Bug
+            Tracking</h3> -->
+          <p class="sm:leading-normal my-2 opacity-75 sm:leading-normal sm:text-2xl text-white mx-auto max-w-xl">Record and track
+            bug details, severity, status, and assigned developer</p>
+        </div>
+        <div class="lg:flex-[1_1_30%] mx-auto">
+          <span class="font-semibold font-custom text-9xl h2 md:text-9xl text-white block sm:mb-6 fw-bold">02 Collaboration</span>
+          <!-- <h3 class="font-semibold font-custom text-3xl lg:text-3xl lg:leading-none text-white max-w-4xl mx-auto mb-1">
+            Collaboration</h3> -->
+          <p class="sm:leading-normal my-2 text-lg sm:leading-normal opacity-75 text-2xl text-white mx-auto max-w-xl">Efficient bug
+            resolution and collaboration among team members</p>
+        </div>
+        <div class="lg:flex-[1_1_30%] mx-auto">
+          <span class="font-semibold font-custom text-9xl h2 md:text-9xl fw-bold block sm:mb-6">03 Task Management</span>
+          <!-- <h3 class="font-semibold font-custom text-3xl lg:text-3xl lg:leading-none text-white max-w-4xl mx-auto mb-1">
+            Task Management</h3> -->
+          <p class="sm:leading-normal my-2 text-lg sm:leading-normal opacity-75 text-2xl text-white mx-auto max-w-xl">Prioritize and
+            assign tasks, track progress, and manage milestones</p>
+        </div>
+        <div class="lg:flex-[1_1_30%] mx-auto">
+          <span class="font-semibold font-custom text-9xl md:text-9xl text-white block sm:mb-6 my-2 fw-bold h2">04 Project Planning</span>
+          <!-- <h3 class="font-semibold font-custom text-3xl lg:text-3xl lg:leading-none text-white max-w-4xl mx-auto mb-1">
+            Project Planning</h3> -->
+          <p class="sm:leading-normal text-lg sm:leading-normal opacity-75: text-2xl text-white mx-auto max-w-xl">Plan and organize
+            projects, assign tasks, and track progress</p>
+        </div>
+        <div class="lg:flex-[1_1_30%] mx-auto">
+          <span class="font-semibold font-custom text-9xl md:text-9xl text-white block sm:mb-6 my-2 fw-bold h2">05 Holistic View</span>
+          <!-- <h3 class="font-semibold font-custom text-3xl lg:text-3xl lg:leading-none text-white max-w-4xl mx-auto mb-1">
+            Holistic View</h3> -->
+          <p class="sm:leading-normal text-lg sm:leading-normal opacity-75:text-2xl text-white mx-auto max-w-xl">Get a
+            comprehensive view of project status and progress</p>
+        </div>
+        <div class="lg:flex-[1_1_30%] mx-auto">
+          <span class="font-semibold font-custom text-9xl md:text-9xl text-white block sm:mb-6 my-2 fw-bold h2">06 Coordination</span>
+          <!-- <h3 class="font-semibold font-custom text-3xl lg:text-3xl lg:leading-none text-white max-w-4xl mx-auto mb-1">
+            Coordination</h3> -->
+          <p class="sm:leading-normal text-lg sm:leading-normal opacity-75: text-2xl text-white mx-auto max-w-xl">Effectively
+            oversee and coordinate the development process</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <div
     id="carouselExample"
     class="carousel slide"
@@ -616,6 +711,120 @@
     </button>
   </div>
 
+<section
+  id="faq"
+  class="faq section-bg"
+>
+  <div
+    class="container"
+    data-aos="fade-up"
+  >
+
+    <div class="section-title text-center" id="FAQs">
+      <h2>FAQs</h2>
+      <p>Clear your all doubts...</p>
+    </div>
+
+    <div
+      class="faq"
+      style="text-align: center;"
+    >
+      <style>
+        body {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          background-color: white;
+        }
+
+        .faq {
+          width: 70%;
+          margin: auto;
+        }
+
+        .faq div {
+          margin: 1rem auto;
+          background-color: #fff;
+        }
+
+        .question {
+          font-size: 18px;
+          background-color: #030000;
+          margin: 0px;
+          padding: 15px;
+          color: white;
+          border: 1px solid white;
+        }
+
+        .answer {
+          font-size: 18px;
+          margin: 0px;
+          padding: 0px 15px;
+          line-height: 2;
+          max-height: 0px;
+          overflow: hidden;
+          transition: 2s;
+          color: rgb(255, 255, 255);
+          background-color: rgb(74, 81, 135);
+        }
+
+        .opener {
+          font-size: 25px;
+          float: right;
+          line-height: 0.8;
+          cursor: pointer;
+          color: white
+        }
+      </style>
+      <div>
+        <p class="question rounded-4">What is Bug Tracking? <span
+            onclick='faq(this)'
+            class="opener"
+          >+</span></p>
+        <p class="answer rounded-4">Bug tracking, in a nutshell, is the systematic process of identifying, reporting, managing, and resolving issues and
+        defects in software development.</p>
+      </div>
+
+      <div>
+        <p class="question rounded-4">What is Bug Tracking System? <span
+            onclick='faq(this)'
+            class="opener"
+          >+</span></p>
+        <p class="answer rounded-4">A bug tracking system is a software tool used by development teams to efficiently manage and track issues, bugs, and
+        tasks related to software development.</p>
+      </div>
+
+      <div>
+        <p class="question rounded-4">Why the bug tracking system is required now in days? <span
+            onclick='faq(this)'
+            class="opener"
+          >+</span></p>
+        <p class="answer rounded-4">Bug tracking systems are crucial in modern software development because they enhance product quality, streamline
+        collaboration, and improve the overall development process. As software complexity grows, so does the potential for bugs
+        and issues.</p>
+      </div>
+
+      <div>
+        <p class="question rounded-4">Is it similar to the Jira Software? <span
+            onclick='faq(this)'
+            class="opener"
+          >+</span></p>
+        <p class="answer rounded-4">No, It is not similar to the Jira Software. Just some portion of this software is similar. Rest is the new features that is not in Jira.</p>
+        <script>
+          function faq(ele) {
+            var x = ele.parentElement.nextElementSibling.style.cssText;
+            if (x == 'max-height: 500px;') {
+              ele.style.cssText = 'transform: rotate(0deg);';
+              ele.parentElement.nextElementSibling.style.cssText = "transition:0.3s;max-height:0px;";
+            }
+            else {
+              ele.style.cssText = 'transform: rotate(45deg);';
+              ele.parentElement.nextElementSibling.style.cssText = "max-height:500px;";
+            }
+          }
+        </script>
+      </div>
+
+    </div>
+</section>
 
   <div
     class="container"
@@ -625,7 +834,7 @@
       class="container"
       id="hrefcontactus"
     >
-      <div class="container">
+      <div class="container" id="support">
         <footer class="py-5">
           <div class="row">
             <div class="col-6 col-md-2 mb-3" style="margin:auto">
@@ -636,15 +845,15 @@
                     class="nav-link p-0 text-muted"
                   >Home</a></li>
                 <li class="nav-item mb-2"><a
-                    href="#"
+                    href="#features"
                     class="nav-link p-0 text-muted"
-                  >Features</a></li>
+                  >Solution</a></li>
                 <li class="nav-item mb-2"><a
-                    href="#"
+                    href="#FAQs"
                     class="nav-link p-0 text-muted"
                   >FAQs</a></li>
                 <li class="nav-item mb-2"><a
-                    href="#"
+                    href="/about"
                     class="nav-link p-0 text-muted"
                   >About</a></li>
               </ul>
@@ -666,31 +875,34 @@
                     class="nav-link p-0 text-muted"
                   >Rinkal Mav</a></li>
                 <li class="nav-item mb-2"><a
-                    href="./ContactUS.html"
+                    href="/contact"
                     class="nav-link p-0 text-muted"
                   >Contact Us</a></li>
               </ul>
             </div>
 
             <div class="col-md-5 offset-md-1 mb-3">
-              <form>
+              <form action="/subscribe" method="post">
                 <h5>Subscribe to our newsletter</h5>
                 <p>Monthly digest of what's new and exciting from us.</p>
                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  
                   <label
                     for="newsletter1"
                     class="visually-hidden"
                   >Email address</label>
                   <input
                     id="newsletter1"
-                    type="text"
+                    type="email"
                     class="form-control"
                     placeholder="Email address"
+                    name="newsletter"
                   >
-                  <button
+                 <button
                     class="btn btn-primary"
                     type="button"
                   >Subscribe</button>
+                
                 </div>
               </form>
             </div>
