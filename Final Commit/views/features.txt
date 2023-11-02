@@ -1,0 +1,12 @@
+1. Bug Tracking
+Record and track bug details, severity, status, and assigned developer
+
+2. Collaboration
+Efficient bug resolution and collaboration among team members
+
+3. Task Management
+Prioritize and assign tasks, track progress, and manage milestones
+
+4. Project Planning
+Plan and organize projects, assign tasks, and track progress
+
