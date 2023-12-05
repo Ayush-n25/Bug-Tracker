@@ -16,10 +16,8 @@ Bug Monitor is a user-friendly tool designed to provide a seamless project manag
 
 ## Pics :
 
-'''markdown
-![Screenshot 1](![image](Screenshots/1home.jpg)
-)
-'''
+<img width="20" src="https://github.com/Ayush-n25/Bug-Tracker/blob/8454b1cff4a34c510d22e23c9368a43dd4c03f72/Screenshots/1home.jpg">
+
 ## Getting Started:
 
 1. **Clone the Repository:**
