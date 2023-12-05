@@ -14,10 +14,12 @@ Bug Monitor is a user-friendly tool designed to provide a seamless project manag
 - **Collaboration:** Streamline teamwork with robust communication features like chat.
 - **Customization:** Tailor workflows and settings to fit your needs.
 
-## Demo Link:
+## Pics :
 
-Explore Bug Monitor in action! Check out our [Demo](#) to see how it can revolutionize your project management workflow.
-
+'''markdown
+![Screenshot 1](![image](https://github.com/Ayush-n25/Bug-Tracker/assets/97076920/4cd806d2-52f4-40a0-a58d-3d34e78d6940)
+)
+'''
 ## Getting Started:
 
 1. **Clone the Repository:**
