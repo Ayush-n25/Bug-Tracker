@@ -16,7 +16,7 @@ Bug Monitor is a user-friendly tool designed to provide a seamless project manag
 
 ## Pics :
 
-<img src="Screenshots/1home.jpg" alt="See screenshot folder" title="Home">
+<img src="Screenshots/home.jpg" alt="See screenshot folder" title="Home">
 
 ## Getting Started:
 
